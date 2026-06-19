@@ -1,2 +1,72 @@
 # Hasib-Musazai
 Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasibullah Musazai | Portfolio</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:#fff}
+header{padding:80px 20px;background:linear-gradient(135deg,#111827,#0ea5e9)}
+.container{max-width:1100px;margin:auto;padding:20px}
+.hero{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+img{width:260px;border-radius:20px}
+.card{background:#111827;padding:20px;border-radius:16px;margin:15px 0}
+h1,h2{color:#38bdf8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+footer{text-align:center;padding:30px;color:#94a3b8}
+a{color:#38bdf8}
+</style>
+</head>
+<body>
+<header>
+<div class="container hero">
+<div>
+<h1>Hasibullah Musazai</h1>
+<p>Senior Structural Engineer • PMP® • Business Development Manager</p>
+<p>Delivering infrastructure, construction, government contracting and international development projects.</p>
+<p><a href="https://www.linkedin.com/in/hasib-musazai-aa717828a">LinkedIn Profile</a></p>
+</div>
+</div>
+</header>
+
+<div class="container">
+<h2>Professional Summary</h2>
+<div class="card">
+Results-driven Senior Engineering & Business Development Manager with experience in construction engineering, project management, proposal development, contract management, UNGM tenders and US Government projects.
+</div>
+
+<h2>Core Expertise</h2>
+<div class="grid">
+<div class="card">Structural Engineering</div>
+<div class="card">Project Management</div>
+<div class="card">Business Development</div>
+<div class="card">UNGM Tendering</div>
+<div class="card">Cost Estimation</div>
+<div class="card">Contract Management</div>
+</div>
+
+<h2>Featured Projects</h2>
+<div class="grid">
+<div class="card"><h3>US Government Contract Projects</h3><p>Managed planning, coordination and delivery activities.</p></div>
+<div class="card"><h3>Infrastructure Development Programs</h3><p>Construction planning, quality control and execution.</p></div>
+<div class="card"><h3>International Tender Management</h3><p>Technical proposals, financial proposals and bid submissions.</p></div>
+</div>
+
+<h2>Experience Highlights</h2>
+<div class="card">Concepta Management LLC • Business Development Officer • 2025–Present</div>
+<div class="card">Invest Master Construction • Construction Manager • 2024–2025</div>
+<div class="card">Ural Group LLC • General Manager • 2023–2025</div>
+
+<h2>Contact</h2>
+<div class="card">
+Email: h47816mz@gmail.com<br>
+Phone: +93 787 088 141<br>
+Location: Kabul, Afghanistan
+</div>
+</div>
+
+<footer>© Hasibullah Musazai</footer>
+</body>
+</html>
