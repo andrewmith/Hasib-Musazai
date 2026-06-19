@@ -1,19 +1,18 @@
-# Hasib-Musazai
-Portfolio
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasibullah Musazai | Portfolio</title>
-    <!-- FontAwesome for professional icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         :root {
             --bg: #0b1220;
             --card: #111827;
             --primary: #38bdf8;
-            --text: #1f2937;
             --text-light: #f8fafc;
             --muted: #94a3b8;
         }
@@ -32,12 +31,12 @@ Portfolio
             line-height: 1.6;
         }
 
-        /* NAVBAR SECTION */
+        /* NAV */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(11, 18, 32, 0.8);
+            background: rgba(11, 18, 32, 0.85);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -47,12 +46,6 @@ Portfolio
             border-bottom: 1px solid #1f2937;
         }
 
-        nav h2 {
-            color: var(--text-light);
-            font-size: 20px;
-            font-weight: 600;
-        }
-
         nav h2 span {
             color: var(--primary);
         }
@@ -60,75 +53,47 @@ Portfolio
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
             color: var(--muted);
             text-decoration: none;
             font-size: 14px;
-            font-weight: 500;
-            transition: 0.3s;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--primary);
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 160px 8% 80px 8%;
-            gap: 40px;
+            padding: 140px 8% 80px;
             min-height: 90vh;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h3 {
-            color: var(--primary);
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 10px;
+            gap: 40px;
         }
 
         .hero h1 {
             font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 10px;
         }
 
-        .hero h4 {
-            font-size: 22px;
-            color: var(--muted);
-            font-weight: 500;
-            margin-bottom: 20px;
+        .hero h3 {
+            color: var(--primary);
         }
 
         .hero p {
             color: var(--muted);
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-
-        .btn-container {
-            display: flex;
-            gap: 15px;
+            margin: 15px 0;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 28px;
+            padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: 0.3s;
+            margin-right: 10px;
         }
 
         .btn-primary {
@@ -136,298 +101,292 @@ Portfolio
             color: #000;
         }
 
-        .btn-primary:hover {
-            background: #7dd3fc;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
-
         .btn-outline {
-            border: 2px solid var(--primary);
+            border: 1px solid var(--primary);
             color: var(--primary);
         }
 
-        .btn-outline:hover {
-            background: rgba(56, 189, 248, 0.1);
-        }
-
-        .hero-img-container {
-            position: relative;
-        }
-
         .hero img {
-            width: 340px;
-            height: 340px;
+            width: 320px;
+            height: 320px;
             border-radius: 50%;
-            object-fit: cover;
             border: 4px solid var(--primary);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+            object-fit: cover;
         }
 
-        /* GENERAL SECTION STYLING */
         section {
-            padding: 90px 8%;
+            padding: 80px 8%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title p {
-            color: var(--primary);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
             font-size: 32px;
-            font-weight: 700;
         }
 
-        /* ABOUT SECTION & COUNTERS */
-        .about-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
+        .section-title p {
+            color: var(--primary);
         }
 
-        .about-text {
+        /* ABOUT */
+        .about {
             text-align: center;
-            max-width: 800px;
-            font-size: 16px;
             color: var(--muted);
+            max-width: 800px;
+            margin: auto;
         }
 
         .counter-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            width: 100%;
-            max-width: 800px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .counter-card {
             background: var(--card);
-            border: 1px solid #1f2937;
+            padding: 20px;
             border-radius: 12px;
-            padding: 25px;
             text-align: center;
         }
 
         .counter-card h3 {
             color: var(--primary);
-            font-size: 32px;
-            margin-bottom: 5px;
+            font-size: 28px;
         }
 
-        .counter-card p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* SKILLS GRID */
+        /* SKILLS */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
 
         .card {
             background: var(--card);
-            border: 1px solid #1f2937;
+            padding: 20px;
             border-radius: 12px;
-            padding: 30px 25px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            border: 1px solid #1f2937;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .card-icon {
-            font-size: 35px;
+        .card i {
+            font-size: 28px;
             color: var(--primary);
         }
 
         .card h3 {
-            font-size: 20px;
-            font-weight: 600;
+            margin: 10px 0;
         }
 
         .card p {
             color: var(--muted);
-            font-size: 14px;
         }
 
-        .badge {
-            align-self: flex-start;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* PROJECTS SECTION */
-        .project-card {
+        /* PROJECTS */
+        .project {
             background: var(--card);
-            border: 1px solid #1f2937;
+            padding: 20px;
             border-radius: 12px;
-            overflow: hidden;
-            transition: 0.3s;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 200px;
-            background: #1e293b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-            font-size: 40px;
-        }
-
-        .project-info {
-            padding: 25px;
-        }
-
-        .project-info h3 {
-            font-size: 19px;
-            margin-bottom: 10px;
-        }
-
-        .project-info p {
+        .project p {
             color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 15px;
         }
 
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
+        .tags span {
             background: #1e293b;
-            color: #94a3b8;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 11px;
+            padding: 4px 10px;
+            margin: 3px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 12px;
         }
 
-        /* CONTACT SECTION */
-        .contact-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .contact-box {
-            background: var(--card);
-            border: 1px solid #1f2937;
-            border-radius: 12px;
-            padding: 25px;
+        /* CONTACT */
+        .contact {
             text-align: center;
         }
 
-        .contact-box i {
-            font-size: 24px;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .contact-box h4 {
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
-
-        .contact-box p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
         form {
+            max-width: 600px;
+            margin: auto;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            max-width: 700px;
-            margin: 0 auto;
+            gap: 10px;
         }
 
         input, textarea {
-            width: 100%;
-            padding: 14px;
+            padding: 12px;
             background: var(--card);
             border: 1px solid #1f2937;
+            color: white;
             border-radius: 8px;
-            color: var(--text-light);
-            font-size: 15px;
-            outline: none;
         }
 
-        input:focus, textarea:focus {
-            border-color: var(--primary);
-        }
-
-        form .btn-submit {
+        button {
+            padding: 12px;
             background: var(--primary);
-            color: #000;
             border: none;
             cursor: pointer;
-            font-weight: 600;
-            padding: 14px;
             border-radius: 8px;
-            transition: 0.3s;
         }
 
-        form .btn-submit:hover {
-            background: #7dd3fc;
-        }
-
-        /* FOOTER */
         footer {
+            text-align: center;
+            padding: 30px;
             border-top: 1px solid #1f2937;
-            padding: 40px 8% 20px 8%;
-            background: #090f1a;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-brand {
-            max-width: 300px;
-        }
-
-        .footer-brand h3 {
-            margin-bottom: 10px;
-        }
-
-        .footer-brand p {
+            margin-top: 40px;
             color: var(--muted);
-            font-size: 14px;
         }
 
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
 
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>Hasib<span>Musazai</span></h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div>
+        <h3>Structural Engineer</h3>
+        <h1>Hasibullah Musazai</h1>
+        <p>Engineering professional specializing in structural design and business development.</p>
+
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#projects" class="btn btn-outline">View Work</a>
+    </div>
+
+    <img src="https://via.placeholder.com/320" alt="Profile">
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-title">
+        <p>About Me</p>
+        <h2>Who I Am</h2>
+    </div>
+
+    <p class="about">
+        Experienced Structural Engineer & Business Development Manager with expertise in project planning,
+        engineering design, and technical leadership.
+    </p>
+
+    <div class="counter-grid">
+        <div class="counter-card">
+            <h3>5+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="counter-card">
+            <h3>20+</h3>
+            <p>Projects</p>
+        </div>
+        <div class="counter-card">
+            <h3>10+</h3>
+            <p>Clients</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="section-title">
+        <p>Skills</p>
+        <h2>My Expertise</h2>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-building"></i>
+            <h3>Structural Design</h3>
+            <p>Advanced building and infrastructure design.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Business Development</h3>
+            <p>Strategic planning and project growth.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-drafting-compass"></i>
+            <h3>Engineering Analysis</h3>
+            <p>Load calculations and structural safety.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="section-title">
+        <p>Portfolio</p>
+        <h2>My Projects</h2>
+    </div>
+
+    <div class="grid">
+        <div class="project">
+            <h3>Residential Building Design</h3>
+            <p>Full structural design of multi-storey residential building.</p>
+            <div class="tags">
+                <span>AutoCAD</span>
+                <span>ETABS</span>
+                <span>Concrete</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Commercial Plaza Project</h3>
+            <p>Structural planning and execution supervision.</p>
+            <div class="tags">
+                <span>Steel Design</span>
+                <span>SAP2000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <div class="section-title">
+        <p>Contact</p>
+        <h2>Get In Touch</h2>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Hasibullah Musazai | All Rights Reserved
+</footer>
+
+</body>
 </html>
